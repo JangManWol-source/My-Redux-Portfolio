@@ -1,0 +1,36 @@
+.about{
+    
+    height: 100vh;
+}
+.title{
+    font-weight: 700;
+    font-size: larger;
+    padding-top: 1rem;
+    text-align: left;
+}
+.details{
+    font-weight: 300;
+    font-size: 12px;
+    text-align: left;
+}
+.infos{
+    padding-top: 2rem;
+}
+.info_{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: left;
+}
+.info_ span{
+    margin-left: 5px;
+}
+.about_content{
+    padding: 1rem;
+}
+@media screen and (max-width: 1200px) {
+    .about{
+        height: 100%;
+    }
+}

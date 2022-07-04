@@ -1,0 +1,100 @@
+.home{
+    justify-content: center;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.greetings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+.show_skills{
+    justify-content: space-between;
+    margin: .5rem;
+    font-size: 10px;
+    display: flex;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    width: fit-content;
+    border-radius: 2rem;
+    justify-content: center;
+}
+.logos div{
+    margin-top: 10px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.logos div img{
+    width: 20px;
+    height: auto;
+}
+
+.hello{
+    font-weight: 100;
+}
+.introduce{
+    font-size: 33px;
+    font-weight: 900;
+}
+.cv{
+    margin: 20px;
+}
+.clip1{
+    margin-bottom: 0rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 50px;
+    transform: rotate(90deg);
+    height: 50px;
+}
+.clip2{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 20px;
+    margin-bottom: 10rem;
+    margin-right: 10rem;
+    transform: rotate(40deg);
+    height: 20px;
+}
+.clip3{
+    margin-top: 70px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 50px;
+    transform: rotate(90deg);
+    height: 50px;
+}
+.clip4{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 20px;
+    margin-right: 1rem;
+    transform: rotate(70deg);
+    height: 20px;
+}
+.clip-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 50%;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+.logo{
+    z-index: 2;
+}
+
+
+@media screen and (max-width:600px) {
+    .clip2{
+        margin-bottom: 0;
+    }
+    .clip1{
+        margin-top: 3rem;
+    }
+    
+}
