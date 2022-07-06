@@ -94,7 +94,7 @@ const Home = (props) => {
           transition={{ duration: 2 }}
           className="profession"
         >
-          an aspiring <strong>full-stack developer</strong>
+          an aspiring <strong>react.js developer</strong>
         </motion.div>
         <div className="show_skills">
           <motion.div

@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import variants from "../Animation/in-out";
 import skillsData from "../Data/SkillsData";
+import Info from "../Infos/Info";
 const Skills = () => {
   const textColor = useSelector((state) => state.toggle.textColor);
   const [selected, setSelected] = useState("all");
@@ -45,6 +46,7 @@ const Skills = () => {
             <Chip
               onClick={chipHandler}
               sx={{
+                backgroundColor: '#cccccc',
                 marginRight: 1,
                 marginTop: 1,
                 color: textColor,
@@ -86,7 +88,10 @@ const Skills = () => {
           frontend. I can utilize my knowledge of the front-end field in any
           situation. To become a confident full-stack developer, I am eager to study more and expand my skills.
         </div>
+        
+      <Info />
       </div>
+
     </motion.div>
   );
 };

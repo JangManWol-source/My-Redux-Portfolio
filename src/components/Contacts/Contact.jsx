@@ -6,13 +6,15 @@ import EmailIcon from '@mui/icons-material/Email';
 import PermPhoneMsg from "@mui/icons-material/PermPhoneMsg";
 import { motion } from "framer-motion";
 import variants from "../Animation/in-out";
+import Profile from "../Pofile/Profile";
 const Contact = () => {
   const buttonColor = useSelector((state)=> state.toggle.textColor)
   const color = useSelector((state)=> state.toggle.mode)
   return (
     <motion.div variants={variants} initial='initial' animate='animate' exit='exit' className="w-full flex flex-col min-h-screen  items-center justify-start sm:justify-start">
-      
-      <form className=" w-full flex flex-col items-end rounded px-8 pt-6 pb-8 mb-4 m-10">
+      <Profile />
+
+      <form className=" w-full flex flex-col items-end rounded px-8 pt-1 pb-8 mb-4 m-10">
       <div className="title w-full text-left py-5 text-x1" >Let's talk</div>
         <div className="mb-4 w-full">
         

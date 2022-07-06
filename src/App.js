@@ -14,12 +14,12 @@ function App() {
 
   console.log(isDrawerOpen)
   return (
-    <div className="App" style={{ backgroundColor: bgColor, color: txtColor }}>
+    <div style={{ backgroundColor: bgColor, color: txtColor }}>
       
         <Router>
           <NavBar />
           {isDrawerOpen && <Drawer />}
-          <div className='main'>
+          <div className='container flex flex-wrap justify-between items-center mx-auto'>
             <AnimatorRoute />
           </div>
           <Footer />
