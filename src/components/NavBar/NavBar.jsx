@@ -7,6 +7,8 @@ import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDrawer, toggleMode } from "../../features/toggles";
 import { Sling as Hamburger } from "hamburger-react";
+import DownloadIcon from '@mui/icons-material/Download';
+import { Link } from "react-router-dom";
 const NavBar = (props) => {
  
   const nightMode = useSelector((state) => state.toggle.isNightMode);
@@ -23,14 +25,23 @@ const NavBar = (props) => {
 
   return (
     <div
-      className="border-gray-200 px-2 sticky top-0 z-50 sm:px-4 py-2.5"
+      className="shadow-md border-gray-200 px-2 sticky top-0 z-50 sm:px-4 py-2.5"
       style={{ backgroundColor: "#1f1f1f" }}
     >
       <div className="container flex flex-wrap justify-between items-center mx-auto">
+        <Link to={'/'}>
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
+        </Link>
         <div className="icon_menu">
+          <a href="https://drive.google.com/file/d/1dC4zIhE1dZuDRxWW3riJDOnxmexC-Oqp/view?usp=sharing">
+          <div className="mr-2">
+            <span className='ml-1 font-bold text-white'>CV</span>
+          </div>
+          </a>
+          
+          
           <motion.div
             className="mode"
             initial={{ y: -50, x: 20 }}

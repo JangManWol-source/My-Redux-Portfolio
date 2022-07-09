@@ -12,7 +12,7 @@ const Contact = () => {
   const color = useSelector((state)=> state.toggle.mode)
   return (
     <motion.div variants={variants} initial='initial' animate='animate' exit='exit' className="w-full flex flex-col min-h-screen  items-center justify-start sm:justify-start">
-      <Profile />
+     
 
       <form className=" w-full flex flex-col items-end rounded px-8 pt-1 pb-8 mb-4 m-10">
       <div className="title w-full text-left py-5 text-x1" >Let's talk</div>

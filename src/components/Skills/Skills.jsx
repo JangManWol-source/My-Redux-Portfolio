@@ -38,32 +38,24 @@ const Skills = () => {
   };
   return (
     <motion.div variants={variants} initial='initial' animate='animate' exit='exit' className="w-full flex flex-col min-h-screen items-center justify-start">
-      <div className="md:w-9/12 p-4">
+      <div className="md:full p-4">
         <div className="title">My Expertise</div>
         <div className="text-left text-xs border-b-2 w-20">Related Skills</div>
         <div className="flex justify-center flex-wrap">
           {chipData.map((each) => (
-            <Chip
+            <div
+              className="hover:bg-yellow-500 hover:font-bold hover:text-gray-900 active:bg-yellow-500 rounded-full text-white bg-gray-800 pl-2 pr-2 pt-1 pb-1 text-xs m-1"
               onClick={chipHandler}
-              sx={{
-                backgroundColor: '#cccccc',
-                marginRight: 1,
-                marginTop: 1,
-                color: textColor,
-                fontSize: 10,
-                height: "fit-content",
-              }}
-              label={each.name}
               key={each.id}
-            />
+            >{each.name}</div>
           ))}
         </div>
-        <div className="flex flex-wrap items-center justify-center">
+        <div className="w-full flex flex-wrap items-center justify-center">
           {selected === "all" &&
             skillsData.map((each) => (
               <Card
                 key={each.id}
-                className="w-20 m-2 p-2 h-20 flex flex-col justify-center items-center"
+                className="w-2/5 font-bold md:w-32 hover:rotate-2 hover:scale-110 text-center m-2 p-2 h-20 flex flex-col justify-center items-center"
               >
                 <img className="w-12 h-auto" src={each.img} alt="" />
                 <div style={{ fontSize: 8, color: "#1f1f1f" }}>
@@ -74,7 +66,7 @@ const Skills = () => {
           {filteredSkills.map((each) => (
             <Card
               key={each.id}
-              className="w-20 m-2 p-2 h-20 flex flex-col justify-center items-center"
+              className="w-2/5 md:w-32 font-bold  hover:rotate-2 hover:scale-110 text-center m-2 p-2 h-20 flex flex-col justify-center items-center"
             >
               <img className="w-12 h-auto" src={each.img} alt="" />
               <div style={{ fontSize: 8, color: "#1f1f1f" }}>{each.title}</div>
