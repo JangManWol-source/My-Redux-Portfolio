@@ -5,7 +5,6 @@ export default function Modal(props) {
 
   return (
     <>
-
       <Transition appear show={props.isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={props.closeModal}>
           <Transition.Child

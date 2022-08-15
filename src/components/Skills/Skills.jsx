@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Card, Chip } from "@mui/material";
-import { useSelector } from "react-redux";
-import { motion } from "framer-motion";
+import { Card } from "@mui/material";
+import { Tab } from '@headlessui/react'
+import { AnimateSharedLayout, motion } from "framer-motion";
 import variants from "../Animation/in-out";
 import skillsData from "../Data/SkillsData";
 import Info from "../Infos/Info";
 const Skills = () => {
-  const textColor = useSelector((state) => state.toggle.textColor);
   const [selected, setSelected] = useState("all");
   const chipData = [
     {
@@ -31,6 +30,10 @@ const Skills = () => {
     },
   ];
 
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+  
   const filteredSkills = skillsData.filter((each) => each.type === selected);
   const chipHandler = (e) => {
     let selectedValue = e.target.outerText;
@@ -38,19 +41,39 @@ const Skills = () => {
   };
   return (
     <motion.div variants={variants} initial='initial' animate='animate' exit='exit' className="w-full flex flex-col min-h-screen items-center justify-start">
+    
       <div className="md:full p-4">
         <div className="title">My Expertise</div>
         <div className="text-left text-xs border-b-2 w-20">Related Skills</div>
+    
         <div className="flex justify-center flex-wrap">
-          {chipData.map((each) => (
-            <div
-              className="hover:bg-yellow-500 hover:font-bold hover:text-gray-900 active:bg-yellow-500 rounded-full text-white bg-gray-800 pl-2 pr-2 pt-1 pb-1 text-xs m-1"
-              onClick={chipHandler}
-              key={each.id}
-            >{each.name}</div>
+        <AnimateSharedLayout>
+            <Tab.Group>
+        <Tab.List className="flex space-x-1 w-full m-1 md:w-11/12 rounded-xl bg-gray-700 p-1">
+          {(chipData).map((category) => (
+            <Tab
+            
+            onClick={chipHandler}
+              key={category.id}
+              className={({ selected }) =>
+                classNames(
+                  'w-full rounded-lg p-1 text-sm font-medium leading-5 dark:text-white',
+                  'ring-white ring-opacity-40 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
+                  selected
+                    ? 'bg-yellow-600 shadow'
+                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-gray-900'
+                )
+              }
+            >
+              {category.name}
+            </Tab>
           ))}
+        </Tab.List>
+       
+      </Tab.Group>
+        </AnimateSharedLayout>
         </div>
-        <div className="w-full flex flex-wrap items-center justify-center">
+        <div className="z-40 w-full flex flex-wrap items-center justify-center">
           {selected === "all" &&
             skillsData.map((each) => (
               <Card

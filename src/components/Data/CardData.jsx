@@ -2,7 +2,23 @@ import joellibee from "../../assets/joellibee.png";
 import health from "../../assets/health-crud.png";
 import mobile from "../../assets/mobile.png";
 import netflix from "../../assets/netflix.png";
+import godesq from "../../assets/godesq.png";
 const cardData = [
+  {
+    id: Math.random().toString(),
+    img: godesq,
+    title: "GodesQ Cloned Website",
+    description:
+      "I made this website because this company is the first list for my internship and I want to present it from them.",
+    built: [
+      { item: "react.js" },
+      { item: "redux-toolkit" },
+      { item: "tailwind-css" },
+      { item: "express.js" },
+    ],
+    github: "https://github.com/JangManWol-source/internship",
+    demo: "http://godesqcloned.jamisjoecristian.com/",
+  },
   {
     id: Math.random().toString(),
     img: health,
@@ -35,7 +51,7 @@ const cardData = [
       { item: "tailwind" },
     ],
     github: "https://github.com/JangManWol-source/Joellibee",
-    demo: "http://joellibee.jamisjoecristian.com/",
+    demo: "https://steady-palmier-7734b1.netlify.app/",
   },
   {
     id: Math.random().toString(),

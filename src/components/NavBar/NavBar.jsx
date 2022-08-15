@@ -7,7 +7,6 @@ import NightsStayIcon from "@mui/icons-material/NightsStay";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDrawer, toggleMode } from "../../features/toggles";
 import { Sling as Hamburger } from "hamburger-react";
-import DownloadIcon from '@mui/icons-material/Download';
 import { Link } from "react-router-dom";
 const NavBar = (props) => {
  
@@ -35,7 +34,7 @@ const NavBar = (props) => {
         </div>
         </Link>
         <div className="icon_menu">
-          <a href="https://drive.google.com/file/d/1dC4zIhE1dZuDRxWW3riJDOnxmexC-Oqp/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1vlG4YKl3I1Fj0if5vDxzgnVYgta4v_uP/view?usp=sharing">
           <div className="mr-2">
             <span className='ml-1 font-bold text-white'>CV</span>
           </div>
