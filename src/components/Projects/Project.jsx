@@ -1,11 +1,9 @@
 import React from "react";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 import variants from "../Animation/in-out";
 import "react-alice-carousel/lib/alice-carousel.css";
 import cardData from "../Data/CardData";
-import { Button, Card, Chip } from "@mui/material";
+import { Chip } from "@mui/material";
 const Project = () => {
   return (
     <motion.div
